@@ -21,10 +21,9 @@ environment:
     myvar:
        percent:%
 
-install:
+build_script:
+    - call set mv=percent:%
+    - call echo %mv%
     - call echo %myvar%
     - call echo %mysecvar%
- 
-build_script:
-    - call echo I would build something here
 
