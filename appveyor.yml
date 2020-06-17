@@ -19,8 +19,9 @@ environment:
       secure: Rrtj4Qam1DdF6KXiRI7kHw==
 
 install:
-    - cmd echo %myvar%
-    - ps echo $env:myvar
+    - call echo %myvar%
+    # - ps echo $env:myvar
+    - call echo done ...
  
 build_script:
     - call echo I would build something here
