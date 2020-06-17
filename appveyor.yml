@@ -1,0 +1,27 @@
+image: Visual Studio 2019
+configuration: Release
+skip_commits:
+  files:
+    - '.github/*'
+    - '.travis.yml'
+    - '.gitignore'
+    - '*.md'
+
+environment:
+    matrix:
+    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
+      QT5: C:\Qt\5.14\msvc2017_64
+      VCVARS: C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat
+      ARCHITECTURE: x86_64
+      WARNINGS_AS_ERRORS: ON
+    
+    myvar:
+      secure: Rrtj4Qam1DdF6KXiRI7kHw==
+
+install:
+    - cmd echo %myvar%
+    - ps echo $env:myvar
+ 
+build_script:
+    - call echo I would build something here
+
