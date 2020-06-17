@@ -24,7 +24,6 @@ environment:
 install:
     - call echo %myvar%
     - call echo %mysecvar%
-    - ps Write-Output $myvar
  
 build_script:
     - call echo I would build something here
