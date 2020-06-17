@@ -15,13 +15,16 @@ environment:
       ARCHITECTURE: x86_64
       WARNINGS_AS_ERRORS: ON
     
-    myvar:
+    mysecvar:
       secure: Rrtj4Qam1DdF6KXiRI7kHw==
+
+    myvar:
+       percent:%
 
 install:
     - call echo %myvar%
-    # - ps echo $env:myvar
-    - call echo done ...
+    - call echo %mysecvar%
+    - ps Write-Output $myvar
  
 build_script:
     - call echo I would build something here
