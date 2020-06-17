@@ -19,7 +19,7 @@ environment:
       secure: Rrtj4Qam1DdF6KXiRI7kHw==
 
     myvar:
-       middle%percent:%
+       "middle%percent:%"
 
 install:
     - call echo %myvar%
