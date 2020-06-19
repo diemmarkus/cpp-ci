@@ -22,8 +22,8 @@ environment:
        percent:%
 
 build_script:
-    - call Write-Host $env:myvar
-    - call Write-Host %env:mysecvar
+    - ps: Write-Host $env:myvar
+    - ps: Write-Host %env:mysecvar
     - call set mv=percent:%
     - call echo %mv%
     - call echo %myvar%
